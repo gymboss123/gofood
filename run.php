@@ -77,7 +77,7 @@ function veriflogin($otp, $token)
 	}
 function claim($token)
 	{
-	$data = '{"promo_code":"GOFOODHEMAT1"}';
+	$data = '{"promo_code":"COBAINGOJEK"}';
 	$claim = request("/go-promotions/v1/promotions/enrollments", $token, $data);
 	if ($claim['success'] == 1)
 		{
