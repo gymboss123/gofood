@@ -134,7 +134,7 @@ if ($register == false)
 			echo $claim . "\n";
 			}
 		}
-	  else
+	  	else
 		{
 		echo "Ready to Claim\n";
 		$claim1 = claim1($verif);
