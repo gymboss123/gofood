@@ -86,6 +86,32 @@ function claim($token)
 		return false;
 		}
 	}
+function claim1($token)
+	{
+	$data = '{"promo_code":"GOJEK17"}';
+	$claim1 = request("/go-promotions/v1/promotions/enrollments", $token, $data);
+	if ($claim1['success'] == 1)
+		{
+		return $claim1['data']['message'];
+		}
+	  else
+		{
+		return false;
+		}
+	}
+function claim2($token)
+	{
+	$data = '{"promo_code":"AYOBELANJAHEMAT"}';
+	$claim2 = request("/go-promotions/v1/promotions/enrollments", $token, $data);
+	if ($claim2['success'] == 1)
+		{
+		return $claim2['data']['message'];
+		}
+	  else
+		{
+		return false;
+		}
+	}
 echo "Choose Login or Register? Login = 1 & Register = 2: ";
 $type = trim(fgets(STDIN));
 if($type == 2){
@@ -112,6 +138,8 @@ if ($register == false)
 		{
 		echo "Ready to Claim\n";
 		$claim = claim($verif);
+		$claim = claim1($verif);
+		$claim = claim2($verif);
 		if ($claim == false)
 			{
 			echo "Failed to Claim Voucher, Try to Claim Manually\n";
