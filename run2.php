@@ -131,20 +131,11 @@ if ($register == false)
 			}
 		  else
 			{
-			echo $claim . "\n";
-			}
-		}
-	  	else
-		{
-		echo "Ready to Claim\n";
-		$claim1 = claim1($verif);
-		if ($claim1 == false)
-			{
-			echo "Failed to Claim Voucher, Try to Claim Manually\n";
-			}
-		  else
-			{
-			echo $claim1 . "\n";
+			echo "Ready to Claim\n";
+			$claim = claim1($verif);
+			if ($claim1 == false)
+				{echo "Failed to Claim Voucher, Try to Claim Manually\n";
+				}
 			}
 		}
 	}
