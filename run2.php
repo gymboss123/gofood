@@ -90,9 +90,9 @@ function claim($token)
 	{
 	$data = '{"promo_code":"JADIMERDEKA"}';
 	$claim = request("/go-promotions/v1/promotions/enrollments", $token, $data);
-	if ($claim['success'] == 1)
+	if ($claim1['success'] == 1)
 		{
-		return $claim['data']['message'];
+		return $claim1['data']['message'];
 		}
 	  else
 		{
@@ -134,6 +134,19 @@ if ($register == false)
 			echo $claim . "\n";
 			}
 		}
+	  else
+		{
+		echo "Ready to Claim 1\n";
+		$claim = claim1($verif);
+		if ($claim1 == false)
+			{
+			echo "Failed to Claim Voucher, Try to Claim Manually\n";
+			}
+		  else
+			{
+			echo $claim1 . "\n";
+			}
+		}
 	}
 }else if($type == 1){
 echo "It's Login Way\n";
@@ -167,7 +180,7 @@ if ($login == false)
 			{
 			echo $claim . "\n";
 			}
-      else
+      	else
 		  {
 		  echo "Ready to Claim\n";
 		  $claim1 = claim1($verif);
@@ -178,7 +191,7 @@ if ($login == false)
 		  else
 			{
 			echo $claim1 . "\n";
-			}
+			}	
 		}
 	}	
 }
