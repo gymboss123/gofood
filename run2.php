@@ -86,10 +86,10 @@ function claim($token)
 		return false;
 		}
 	}
-  function claim1($token)
+function claim1($token)
 	{
 	$data = '{"promo_code":"JADIMERDEKA"}';
-	$claim = request("/go-promotions/v1/promotions/enrollments", $token, $data);
+	$claim1 = request("/go-promotions/v1/promotions/enrollments", $token, $data);
 	if ($claim1['success'] == 1)
 		{
 		return $claim1['data']['message'];
@@ -136,8 +136,8 @@ if ($register == false)
 		}
 	  else
 		{
-		echo "Ready to Claim 1\n";
-		$claim = claim1($verif);
+		echo "Ready to Claim\n";
+		$claim1 = claim1($verif);
 		if ($claim1 == false)
 			{
 			echo "Failed to Claim Voucher, Try to Claim Manually\n";
@@ -180,18 +180,6 @@ if ($login == false)
 			{
 			echo $claim . "\n";
 			}
-      	else
-		  {
-		  echo "Ready to Claim\n";
-		  $claim1 = claim1($verif);
-		  if ($claim1 == false)
-			{
-			echo "Failed to Claim Voucher, Try to Claim Manually\n";
-			}
-		  else
-			{
-			echo $claim1 . "\n";
-			}	
 		}
 	}	
 }
