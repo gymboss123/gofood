@@ -88,11 +88,24 @@ function claim($token)
 	}
 function claim1($token)
 	{
-	$data = '{"promo_code":"JADIMERDEKA"}';
-	$claim1 = request("/go-promotions/v1/promotions/enrollments", $token, $data);
+	$data1 = '{"promo_code":"GOJEK17"}';
+	$claim1 = request("/go-promotions/v1/promotions/enrollments", $token, $data1);
 	if ($claim1['success'] == 1)
 		{
 		return $claim1['data']['message'];
+		}
+	  else
+		{
+		return false;
+		}
+	}
+function claim2($token)
+	{
+	$data2 = '{"promo_code":"AYOMERDEKA"}';
+	$claim2 = request("/go-promotions/v1/promotions/enrollments", $token, $data2);
+	if ($claim2['success'] == 1)
+		{
+		return $claim2['data']['message'];
 		}
 	  else
 		{
@@ -131,14 +144,32 @@ if ($register == false)
 			}
 		  else
 			{
-			echo "Ready to Claim\n";
-			$claim = claim1($verif);
-			if ($claim1 == false)
-				{echo "Failed to Claim Voucher, Try to Claim Manually\n";
-				}
-			}
+			echo $claim . "\n";
 		}
+echo "ready to claim 2\n";
+echo "jeda 15 detik\n";
+sleep(15);
+ $claim1 = claim1($verif);
+if (!$claim1)  {
+echo "Failed to Claim Voucher, Try to Claim Manually\n";
+			}
+		  else
+			{
+			echo $claim1 . "\n";
+			}
+echo "ready to claim 3\n";
+echo "jeda 15 detik\n";
+sleep(15);
+ $claim2 = claim2($verif);
+if (!$claim2)  {
+echo "Failed to Claim Voucher, Try to Claim Manually\n";
+			}
+		  else
+			{
+			echo $claim2 . "\n";
+			}
 	}
+ }
 }else if($type == 1){
 echo "It's Login Way\n";
 echo "Input 62 For ID and 1 For US Phone Number\n";
@@ -170,6 +201,28 @@ if ($login == false)
 		  else
 			{
 			echo $claim . "\n";
+			}
+echo "ready to claim 2\n";
+echo "jeda 15 detik\n";
+sleep(15);
+ $claim1 = claim1($verif);
+if (!$claim1)  {
+echo "Failed to Claim Voucher, Try to Claim Manually\n";
+			}
+		  else
+			{
+			echo $claim1 . "\n";
+			}
+echo "ready to claim 3\n";
+echo "jeda 15 detik\n";
+sleep(15);
+ $claim2 = claim2($verif);
+if (!$claim2)  {
+echo "Failed to Claim Voucher, Try to Claim Manually\n";
+			}
+		  else
+			{
+			echo $claim2 . "\n";
 			}
 		}
 	}	
