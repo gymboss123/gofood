@@ -75,7 +75,7 @@ function veriflogin($otp, $token)
 	}
 function claim($token)
 	{
-	$data = '{"promo_code":"GOFOODKERUPUK08"}';
+	$data = '{"promo_code":"GOFOODNASGOR07"}';
 	$claim = request("/go-promotions/v1/promotions/enrollments", $token, $data);
 	if ($claim['success'] == 1)
 		{
@@ -147,8 +147,8 @@ if ($register == false)
 			echo $claim . "\n";
 		}
 echo "ready to claim 2\n";
-echo "jeda 15 detik\n";
-sleep(15);
+echo "jeda 2 detik\n";
+sleep(2);
  $claim1 = claim1($verif);
 if (!$claim1)  {
 echo "Failed to Claim Voucher, Try to Claim Manually\n";
@@ -158,8 +158,8 @@ echo "Failed to Claim Voucher, Try to Claim Manually\n";
 			echo $claim1 . "\n";
 			}
 echo "ready to claim 3\n";
-echo "jeda 15 detik\n";
-sleep(15);
+echo "jeda 2 detik\n";
+sleep(2);
  $claim2 = claim2($verif);
 if (!$claim2)  {
 echo "Failed to Claim Voucher, Try to Claim Manually\n";
@@ -203,8 +203,8 @@ if ($login == false)
 			echo $claim . "\n";
 			}
 echo "ready to claim 2\n";
-echo "jeda 15 detik\n";
-sleep(15);
+echo "jeda 22 detik\n";
+sleep(2);
  $claim1 = claim1($verif);
 if (!$claim1)  {
 echo "Failed to Claim Voucher, Try to Claim Manually\n";
@@ -214,8 +214,8 @@ echo "Failed to Claim Voucher, Try to Claim Manually\n";
 			echo $claim1 . "\n";
 			}
 echo "ready to claim 3\n";
-echo "jeda 15 detik\n";
-sleep(15);
+echo "jeda 22 detik\n";
+sleep(2);
  $claim2 = claim2($verif);
 if (!$claim2)  {
 echo "Failed to Claim Voucher, Try to Claim Manually\n";
