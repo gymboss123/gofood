@@ -174,7 +174,7 @@ if ($register == false)
 			{
 			echo $claim . "\n";
 		}
-echo "ready to claim 2\n";
+echo "ready to claim 1\n";
 echo "jeda 03 detik\n";
 sleep(3);
  $claim1 = claim1($verif);
@@ -185,7 +185,7 @@ echo "Failed to Claim Voucher, Try to Claim Manually\n";
 			{
 			echo $claim1 . "\n";
 			}
-echo "ready to claim 3\n";
+echo "ready to claim 2\n";
 echo "jeda 03 detik\n";
 sleep(3);
  $claim2 = claim2($verif);
@@ -196,7 +196,7 @@ echo "Failed to Claim Voucher, Try to Claim Manually\n";
 			{
 			echo $claim2 . "\n";
 			}
-		  echo "ready to claim 2\n";
+		  echo "ready to claim 3\n";
 echo "jeda 03 detik\n";
 sleep(3);
  $claim3 = claim3($verif);
@@ -207,7 +207,7 @@ echo "Failed to Claim Voucher, Try to Claim Manually\n";
 			{
 			echo $claim3 . "\n";
 			}
-echo "ready to claim 3\n";
+echo "ready to claim 4\n";
 echo "jeda 03 detik\n";
 sleep(3);
  $claim4 = claim4($verif);
@@ -252,7 +252,7 @@ if ($login == false)
 			{
 			echo $claim . "\n";
 			}
-echo "ready to claim 2\n";
+echo "ready to claim 1\n";
 echo "jeda 03 detik\n";
 sleep(3);
  $claim1 = claim1($verif);
@@ -263,7 +263,7 @@ echo "Failed to Claim Voucher, Try to Claim Manually\n";
 			{
 			echo $claim1 . "\n";
 			}
-echo "ready to claim 3\n";
+echo "ready to claim 2\n";
 echo "jeda 03 detik\n";
 sleep(3);
  $claim2 = claim2($verif);
@@ -274,7 +274,7 @@ echo "Failed to Claim Voucher, Try to Claim Manually\n";
 			{
 			echo $claim2 . "\n";
 			}
-		  echo "ready to claim 2\n";
+		  echo "ready to claim 3\n";
 echo "jeda 03 detik\n";
 sleep(3);
  $claim3 = claim3($verif);
@@ -285,7 +285,7 @@ echo "Failed to Claim Voucher, Try to Claim Manually\n";
 			{
 			echo $claim3 . "\n";
 			}
-echo "ready to claim 3\n";
+echo "ready to claim 43\n";
 echo "jeda 03 detik\n";
 sleep(3);
  $claim4 = claim4($verif);
