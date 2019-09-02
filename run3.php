@@ -1,6 +1,8 @@
 <?php
 ###Ini Copyright###
 ###https://github.com/osyduck/Gojek-Register###
+//Added triple functions claim
+//Recoded by ahsan.id
 include ("function.php");
 function nama()
 	{
@@ -75,7 +77,7 @@ function veriflogin($otp, $token)
 	}
 function claim($token)
 	{
-	$data = '{"promo_code":"GOFOODNASGOR07"}';
+	$data = '{"promo_code":"GOFOODHEMAT02"}';
 	$claim = request("/go-promotions/v1/promotions/enrollments", $token, $data);
 	if ($claim['success'] == 1)
 		{
@@ -88,8 +90,8 @@ function claim($token)
 	}
 function claim1($token)
 	{
-	$data = '{"promo_code":"GOJEK17"}';
-	$claim1 = request("/go-promotions/v1/promotions/enrollments", $token, $data);
+	$data1 = '{"promo_code":"GOFOODHEMAT19"}';
+	$claim1 = request("/go-promotions/v1/promotions/enrollments", $token, $data1);
 	if ($claim1['success'] == 1)
 		{
 		return $claim1['data']['message'];
@@ -101,9 +103,35 @@ function claim1($token)
 	}
 function claim2($token)
 	{
-	$data = '{"promo_code":"AYOBELANJAHEMAT"}';
-	$claim2 = request("/go-promotions/v1/promotions/enrollments", $token, $data);
+	$data2 = '{"promo_code":"COBAINGOJEK"}';
+	$claim2 = request("/go-promotions/v1/promotions/enrollments", $token, $data2);
 	if ($claim2['success'] == 1)
+		{
+		return $claim2['data']['message'];
+		}
+	  else
+		{
+		return false;
+		}
+	}
+function claim3($token)
+	{
+	$data3 = '{"promo_code":"GOFOODKERUPUK08"}';
+	$claim3 = request("/go-promotions/v1/promotions/enrollments", $token, $data3);
+	if ($claim3['success'] == 1)
+		{
+		return $claim3['data']['message'];
+		}
+	  else
+		{
+		return false;
+		}
+	}
+function claim4($token)
+	{
+	$data4 = '{"promo_code":"JADIMERDEKA"}';
+	$claim4 = request("/go-promotions/v1/promotions/enrollments", $token, $data4);
+	if ($claim4['success'] == 1)
 		{
 		return $claim2['data']['message'];
 		}
@@ -138,8 +166,6 @@ if ($register == false)
 		{
 		echo "Ready to Claim\n";
 		$claim = claim($verif);
-		$claim = claim1($verif);
-		$claim = claim2($verif);
 		if ($claim == false)
 			{
 			echo "Failed to Claim Voucher, Try to Claim Manually\n";
@@ -147,9 +173,53 @@ if ($register == false)
 		  else
 			{
 			echo $claim . "\n";
-			}
 		}
+echo "ready to claim 1\n";
+echo "jeda 05 detik\n";
+sleep(5);
+ $claim1 = claim1($verif);
+if (!$claim1)  {
+echo "Failed to Claim Voucher, Try to Claim Manually\n";
+			}
+		  else
+			{
+			echo $claim1 . "\n";
+			}
+echo "ready to claim 2\n";
+echo "jeda 05 detik\n";
+sleep(5);
+ $claim2 = claim2($verif);
+if (!$claim2)  {
+echo "Failed to Claim Voucher, Try to Claim Manually\n";
+			}
+		  else
+			{
+			echo $claim2 . "\n";
+			}
+		  echo "ready to claim 3\n";
+echo "jeda 05 detik\n";
+sleep(5);
+ $claim3 = claim3($verif);
+if (!$claim3)  {
+echo "Failed to Claim Voucher, Try to Claim Manually\n";
+			}
+		  else
+			{
+			echo $claim3 . "\n";
+			}
+echo "ready to claim 4\n";
+echo "jeda 05 detik\n";
+sleep(5);
+ $claim4 = claim4($verif);
+if (!$claim4)  {
+echo "Failed to Claim Voucher, Try to Claim Manually\n";
+			}
+		  else
+			{
+			echo $claim4 . "\n";
+			}
 	}
+ }
 }else if($type == 1){
 echo "It's Login Way\n";
 echo "Input 62 For ID and 1 For US Phone Number\n";
@@ -181,6 +251,50 @@ if ($login == false)
 		  else
 			{
 			echo $claim . "\n";
+			}
+echo "ready to claim 1\n";
+echo "jeda 05 detik\n";
+sleep(5);
+ $claim1 = claim1($verif);
+if (!$claim1)  {
+echo "Failed to Claim Voucher, Try to Claim Manually\n";
+			}
+		  else
+			{
+			echo $claim1 . "\n";
+			}
+echo "ready to claim 2\n";
+echo "jeda 05 detik\n";
+sleep(5);
+ $claim2 = claim2($verif);
+if (!$claim2)  {
+echo "Failed to Claim Voucher, Try to Claim Manually\n";
+			}
+		  else
+			{
+			echo $claim2 . "\n";
+			}
+		  echo "ready to claim 3\n";
+echo "jeda 05 detik\n";
+sleep(5);
+ $claim3 = claim3($verif);
+if (!$claim3)  {
+echo "Failed to Claim Voucher, Try to Claim Manually\n";
+			}
+		  else
+			{
+			echo $claim3 . "\n";
+			}
+echo "ready to claim 43\n";
+echo "jeda 05 detik\n";
+sleep(5);
+ $claim4 = claim4($verif);
+if (!$claim4)  {
+echo "Failed to Claim Voucher, Try to Claim Manually\n";
+			}
+		  else
+			{
+			echo $claim4 . "\n";
 			}
 		}
 	}	
