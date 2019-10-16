@@ -164,8 +164,8 @@ if ($register == false)
 		}
 	  else
 		{
-		echo "jeda 10 detik\n";
-		sleep(10);
+		echo "jeda 5 detik\n";
+		sleep(5);
 		echo "Ready to Claim\n";
 		$claim = claim($verif);
 		if ($claim == false)
