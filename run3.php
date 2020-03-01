@@ -103,7 +103,7 @@ function claim1($token)
 	}
 function claim2($token)
 	{
-	$data2 = '{"promo_code":"AYOCOBAGOJEK"}';
+	$data2 = '{"promo_code":"GOFOOD021120B"}';
 	$claim2 = request("/go-promotions/v1/promotions/enSCANPRAMUKArollments", $token, $data2);
 	if ($claim2['success'] == 1)
 		{
